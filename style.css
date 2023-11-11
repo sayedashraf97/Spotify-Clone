@@ -1,0 +1,134 @@
+/* @import statements bring in the 'Ubuntu' and 'Varela Round' fonts from Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/* The body has a background color of antiquewhite, providing an initial background color for the entire page. */
+body{
+    background-color: antiquewhite;
+}
+/* The universal selector * resets margin and padding to 0 for all elements. */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* The font for the navigation is set to 'Ubuntu'. */
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* The navigation is displayed as a flex container with a black background and white text. */
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+/* List items in the navigation have padding, contributing to the layout. */
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+/* It's a flex container with centered alignment and bold text. */
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+/* This represents the main content area with a minimum height, black background, white text, rounded corners, and a background image. */
+
+/* It is flex-based, centered, and has padding. */
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;
+   background-image: url('bg.jpg');
+}
+
+/* Positioned at the bottom of the page, sticky. */
+/* Black background, white text, centered, and with flex-direction set to column. */
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+/* Margin is added to the icons for spacing. */
+.icons{
+    margin-top: 14px; 
+}
+.icons i{
+    cursor: pointer;
+}
+/* The progress bar has a width of 80vw (viewport width) and a cursor set to pointer. */
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+/* Adds margin to the top of the song items. */
+
+.songItemContainer{
+    margin-top: 74px;
+}
+
+/* Flex container for each song item with a white background, black text, margin, rounded corners, and space between items. */
+.songItem{
+    
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+/* Adds margin to the timestamp. */
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+/* Positioned absolutely, using 'Varela Round' font. */
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+/* Changes the body background color to red when the screen width is less than or equal to 1100px. */
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }
